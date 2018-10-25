@@ -1,4 +1,4 @@
-#N canvas 570 81 752 657 10;
+#N canvas 411 225 752 657 10;
 #X obj -2 291 gemwin;
 #X msg 27 245 0 \, destroy;
 #X msg -47 188 create \, frame 30 \, 1;
@@ -59,7 +59,7 @@
 #X obj 550 438 loadbang;
 #X msg 550 461 1.44;
 #X obj 299 43 alpha;
-#X obj 279 -29 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 279 -29 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 90 70 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -81,6 +81,8 @@
 #X obj 152 553 *;
 #X msg 73 417 1;
 #X obj 73 384 loadbang;
+#X obj 279 -74 loadbang;
+#X msg 279 -51 0;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 3 0 40 0;
@@ -143,3 +145,5 @@
 #X connect 57 0 53 0;
 #X connect 58 0 55 0;
 #X connect 59 0 58 0;
+#X connect 60 0 61 0;
+#X connect 61 0 41 0;
