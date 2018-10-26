@@ -1,6 +1,7 @@
 #N canvas 66 157 450 300 10;
 #X msg 112 176 0 \, destroy;
 #X obj 83 222 gemwin 60;
-#X msg 38 119 reset \, dimen 800 600 \, frame 60 \, create \, 1;
+#X msg 39 120 reset \, dimen 800 600 \, FSAA 4 \, frame 60 \, create
+\, 1;
 #X connect 0 0 1 0;
 #X connect 2 0 1 0;
