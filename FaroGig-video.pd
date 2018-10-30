@@ -1,4 +1,4 @@
-#N canvas 1 332 841 354 10;
+#N canvas 17 367 841 354 10;
 #X msg 68 265 0 \, destroy;
 #X obj 39 311 gemwin 60;
 #X msg 39 60 reset \, dimen 800 600 \, offset 1366 1 \, border 0 \,
@@ -17,6 +17,17 @@ FSAA 4 \, frame 60 \, create \, 1;
 #X obj 518 119 caminho;
 #X obj 518 98 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
+#X obj 527 178 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 566 180 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 528 272 vende;
+#X obj 627 278 fazer_amor;
+#X obj 320 304 table cores 12;
+#X obj 291 141 loadbang;
+#X msg 291 163 \; cores read cores.txt;
+#X obj 268 286 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
 #X connect 0 0 1 0;
 #X connect 2 0 1 0;
 #X connect 4 0 3 0;
@@ -27,3 +38,7 @@ FSAA 4 \, frame 60 \, create \, 1;
 #X connect 9 1 10 1;
 #X connect 10 0 11 0;
 #X connect 13 0 12 0;
+#X connect 14 0 7 0;
+#X connect 15 0 7 1;
+#X connect 19 0 20 0;
+#X connect 21 0 3 1;
