@@ -1,16 +1,29 @@
-#N canvas 25 268 841 354 10;
-#X msg 112 176 0 \, destroy;
-#X obj 83 222 gemwin 60;
-#X msg 39 120 reset \, dimen 800 600 \, offset 1366 1 \, border 0 \,
+#N canvas 1 332 841 354 10;
+#X msg 68 265 0 \, destroy;
+#X obj 39 311 gemwin 60;
+#X msg 39 60 reset \, dimen 800 600 \, offset 1366 1 \, border 0 \,
 FSAA 4 \, frame 60 \, create \, 1;
-#X obj 203 258 GemFeedback;
-#X obj 203 231 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 213 308 GemFeedback;
+#X obj 213 281 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 203 173 loadbang;
-#X msg 203 196 0;
+#X obj 213 223 loadbang;
+#X msg 213 246 0;
 #X obj 525 204 coracao;
+#X msg 50 100 reset \, dimen 800 600 \, FSAA 4 \, frame 60 \, create
+\, 1;
+#X obj 323 224 adc~;
+#X obj 322 248 +~;
+#X obj 322 271 send~ SoundInputMono;
+#X obj 518 119 caminho;
+#X obj 518 98 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X connect 0 0 1 0;
 #X connect 2 0 1 0;
 #X connect 4 0 3 0;
 #X connect 5 0 6 0;
 #X connect 6 0 4 0;
+#X connect 8 0 1 0;
+#X connect 9 0 10 0;
+#X connect 9 1 10 1;
+#X connect 10 0 11 0;
+#X connect 13 0 12 0;
