@@ -1,0 +1,21 @@
+#N canvas 1 153 625 556 10;
+#X obj 25 231 IAO-partGen a A;
+#X obj 112 93 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 239 93 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 152 231 IAO-partGen E e;
+#X obj 359 96 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 8300 1;
+#X obj 486 96 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 272 234 IAO-partGen i I;
+#X obj 399 234 IAO-partGen o O;
+#X obj 129 289 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 42 427 IAO-partGen u U;
+#X connect 1 0 0 2;
+#X connect 2 0 3 2;
+#X connect 4 0 6 2;
+#X connect 5 0 7 2;
+#X connect 8 0 9 2;
