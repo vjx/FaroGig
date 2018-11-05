@@ -1,0 +1,18 @@
+Como controlar os settings da camera:
+
+Para fazer disable do auto White Balance:
+
+v4l2-ctl -d /dev/video1 --set-ctrl=white_balance_automatic=0
+
+Para fazer disable do auto Gain:
+
+v4l2-ctl -d /dev/video1 --set-ctrl=gain_automatic=0
+
+
+Acertar o nivel do Gain (entre 0 e 63):
+v4l2-ctl -d /dev/video1 --set-ctrl=gain=0
+
+Acertar o nivel do Hue (entre -90 e 90):
+v4l2-ctl -d /dev/video1 --set-ctrl=hue=15
+
+Parece que nao da para fazer disable do auto exposure.
