@@ -1,4 +1,4 @@
-#N canvas 208 181 897 522 10;
+#N canvas 468 245 897 522 10;
 #X floatatom 237 119 0 0 120 0 - - -;
 #X text 278 119 level \, dB;
 #X floatatom 272 141 0 0 100 0 - - -;
@@ -13,7 +13,7 @@
 #X obj 210 40 hip~ 30;
 #X obj 143 50 hip~ 30;
 #X obj 427 29 vsl 15 128 0 99.9 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 9397 1;
+-1 -1 0 1;
 #X obj 325 238 mtof;
 #X floatatom 330 210 5 0 0 0 - - -;
 #X obj 573 250 freeverb~;
@@ -38,6 +38,9 @@
 ;
 #X text 731 97 - stereo width of reverb (default: 1);
 #X text 753 51 - size of the room to be simulated (default=0.85);
+#X obj 15 246 explosion;
+#X obj 13 185 bng 55 250 50 0 empty empty empty 17 7 0 10 -258113 -1
+-1;
 #X connect 0 0 8 2;
 #X connect 2 0 8 3;
 #X connect 4 0 8 4;
@@ -51,3 +54,6 @@
 #X connect 13 0 2 0;
 #X connect 14 0 4 0;
 #X connect 15 0 14 0;
+#X connect 33 0 10 0;
+#X connect 33 0 10 1;
+#X connect 34 0 33 0;
