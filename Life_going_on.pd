@@ -1,4 +1,4 @@
-#N canvas 1 81 1030 602 10;
+#N canvas -97 104 631 623 10;
 #X obj 71 73 gemhead;
 #X obj 91 377 unpack 0 0 0 0;
 #X floatatom 86 400 5 0 0 3 length - -;
@@ -6,30 +6,30 @@
 #X floatatom 185 400 5 0 0 3 height - -;
 #X obj 71 581 rectangle 4 3;
 #X floatatom 235 400 5 0 0 3 fps - -;
-#X obj 236 271 f;
-#X obj 236 294 + 1;
-#X obj 236 317 mod 6941;
+#X obj 236 251 f;
+#X obj 236 274 + 1;
+#X obj 238 295 mod 6941;
 #X obj 71 156 t a b;
 #X obj 118 538 * 4;
 #X obj 170 535 * 3;
 #X floatatom 154 473 5 0 0 0 - - -;
 #X obj 154 495 * 0.01;
-#X obj 236 245 speedlim 33.333;
+#X obj 236 225 speedlim 33.333;
 #X obj 220 488 loadbang;
 #X msg 220 511 132;
 #X obj 71 96 alpha;
-#X obj 71 119 colourRGB 1 1 1 1;
 #X obj 225 57 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 12700 1;
 #X obj 225 193 / 127;
 #X obj 389 257 random 6941;
 #X obj 400 201 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 64 4 loadbang;
 #X msg 64 27 0;
-#X obj 122 38 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 122 38 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 71 341 pix_movie Videos/life_go-glow.mp4;
+#X obj 71 119 colourRGB 1 1 1 0;
+#X obj 71 341 pix_movie Videos/life_go-glow-smaller.mp4;
 #X connect 0 0 18 0;
 #X connect 1 0 2 0;
 #X connect 1 1 3 0;
@@ -49,14 +49,14 @@
 #X connect 15 0 7 0;
 #X connect 16 0 17 0;
 #X connect 17 0 13 0;
-#X connect 18 0 19 0;
-#X connect 19 0 10 0;
-#X connect 20 0 21 0;
-#X connect 21 0 19 4;
-#X connect 22 0 7 1;
-#X connect 23 0 22 0;
-#X connect 24 0 25 0;
+#X connect 18 0 26 0;
+#X connect 19 0 20 0;
+#X connect 20 0 26 4;
+#X connect 21 0 7 1;
+#X connect 22 0 21 0;
+#X connect 23 0 24 0;
+#X connect 24 0 0 0;
 #X connect 25 0 0 0;
-#X connect 26 0 0 0;
+#X connect 26 0 10 0;
 #X connect 27 0 5 0;
 #X connect 27 1 1 0;

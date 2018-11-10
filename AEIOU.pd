@@ -1,21 +1,96 @@
 #N canvas 1 153 625 556 10;
-#X obj 25 231 IAO-partGen a A;
-#X obj 112 93 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 3 467 IAO-partGen a A;
+#X obj 90 329 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 239 93 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 217 329 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 152 231 IAO-partGen E e;
-#X obj 359 96 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8300 1;
-#X obj 486 96 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 130 467 IAO-partGen E e;
+#X obj 337 332 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 272 234 IAO-partGen i I;
-#X obj 399 234 IAO-partGen o O;
-#X obj 129 289 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 464 332 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 42 427 IAO-partGen u U;
+#X obj 250 470 IAO-partGen i I;
+#X obj 377 470 IAO-partGen o O;
+#X obj 580 334 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 493 472 IAO-partGen u U;
+#X obj 343 0 key;
+#X obj 127 213 line;
+#X obj 343 23 spigot;
+#X obj 128 122 random 400;
+#X obj 128 145 + 800;
+#X msg 128 174 1 \, 0 \$1;
+#X obj 385 0 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 206 214 line;
+#X obj 207 123 random 400;
+#X obj 207 146 + 800;
+#X msg 207 175 1 \, 0 \$1;
+#X obj 299 216 line;
+#X obj 300 125 random 400;
+#X obj 300 148 + 800;
+#X msg 300 177 1 \, 0 \$1;
+#X obj 386 219 line;
+#X obj 387 128 random 400;
+#X obj 387 151 + 800;
+#X msg 387 180 1 \, 0 \$1;
+#X obj 479 221 line;
+#X obj 480 130 random 400;
+#X obj 480 153 + 800;
+#X msg 480 182 1 \, 0 \$1;
+#X obj 173 70 sel 113 119 101 114 116;
+#X obj 373 -28 inlet;
+#X msg 40 427 1 1 0;
+#X obj 15 382 loadbang;
+#X msg 157 419 1 0 0;
+#X obj 159 391 loadbang;
+#X msg 277 416 0 1 0;
+#X obj 272 385 loadbang;
+#X obj 402 389 loadbang;
+#X msg 407 420 0.5 0 1;
+#X obj 517 393 loadbang;
+#X msg 522 424 1 0 0.5;
 #X connect 1 0 0 2;
 #X connect 2 0 3 2;
 #X connect 4 0 6 2;
 #X connect 5 0 7 2;
 #X connect 8 0 9 2;
+#X connect 10 0 12 0;
+#X connect 11 0 1 0;
+#X connect 12 0 33 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 15 0 11 0;
+#X connect 16 0 12 1;
+#X connect 17 0 2 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 20 0 17 0;
+#X connect 21 0 4 0;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
+#X connect 24 0 21 0;
+#X connect 25 0 5 0;
+#X connect 26 0 27 0;
+#X connect 27 0 28 0;
+#X connect 28 0 25 0;
+#X connect 29 0 8 0;
+#X connect 30 0 31 0;
+#X connect 31 0 32 0;
+#X connect 32 0 29 0;
+#X connect 33 0 13 0;
+#X connect 33 1 18 0;
+#X connect 33 2 22 0;
+#X connect 33 3 26 0;
+#X connect 33 4 30 0;
+#X connect 34 0 16 0;
+#X connect 35 0 0 1;
+#X connect 36 0 35 0;
+#X connect 37 0 3 1;
+#X connect 38 0 37 0;
+#X connect 39 0 6 1;
+#X connect 40 0 39 0;
+#X connect 41 0 42 0;
+#X connect 42 0 7 1;
+#X connect 43 0 44 0;
+#X connect 44 0 9 1;

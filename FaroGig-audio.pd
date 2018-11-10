@@ -1,4 +1,4 @@
-#N canvas 468 245 897 522 10;
+#N canvas 193 245 897 522 10;
 #X floatatom 237 119 0 0 120 0 - - -;
 #X text 278 119 level \, dB;
 #X floatatom 272 141 0 0 100 0 - - -;
@@ -8,12 +8,12 @@
 #X text 397 301 crossover frequency \, Hz.;
 #X text 391 323 HF damping \, percent;
 #X obj 180 347 rev3~ 100 90 3000 20;
-#X obj 189 12 adc~;
+#X obj 188 -48 adc~;
 #X obj 180 399 dac~;
 #X obj 210 40 hip~ 30;
-#X obj 143 50 hip~ 30;
-#X obj 427 29 vsl 15 128 0 99.9 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+#X obj 144 46 hip~ 30;
+#X obj 411 61 vsl 15 128 0 99.9 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 12292 1;
 #X obj 325 238 mtof;
 #X floatatom 330 210 5 0 0 0 - - -;
 #X obj 573 250 freeverb~;
@@ -41,19 +41,30 @@
 #X obj 15 246 explosion;
 #X obj 13 185 bng 55 250 50 0 empty empty empty 17 7 0 10 -258113 -1
 -1;
+#X obj 173 -8 *~;
+#X obj 211 -4 *~;
+#X obj 288 -6 lop~ 30;
+#X obj 371 -65 vsl 15 128 0.01 1 1 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 449 71 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 10092 1;
 #X connect 0 0 8 2;
 #X connect 2 0 8 3;
 #X connect 4 0 8 4;
 #X connect 5 0 8 5;
 #X connect 8 0 10 0;
 #X connect 8 1 10 1;
-#X connect 9 0 12 0;
-#X connect 9 1 11 0;
+#X connect 9 0 35 0;
+#X connect 9 1 36 0;
 #X connect 11 0 8 1;
 #X connect 12 0 8 0;
 #X connect 13 0 2 0;
 #X connect 14 0 4 0;
 #X connect 15 0 14 0;
-#X connect 33 0 10 0;
-#X connect 33 0 10 1;
 #X connect 34 0 33 0;
+#X connect 35 0 12 0;
+#X connect 36 0 11 0;
+#X connect 37 0 35 1;
+#X connect 37 0 36 1;
+#X connect 38 0 37 0;
+#X connect 39 0 15 0;

@@ -1,8 +1,6 @@
-#N canvas 1 413 841 354 10;
+#N canvas 1 81 845 420 10;
 #X msg 68 265 0 \, destroy;
 #X obj 39 311 gemwin 60;
-#X msg 39 60 reset \, dimen 800 600 \, offset 1366 1 \, border 0 \,
-FSAA 4 \, frame 60 \, create \, 1;
 #X obj 213 308 GemFeedback;
 #X obj 213 281 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -22,7 +20,7 @@ FSAA 4 \, frame 60 \, create \, 1;
 #X obj 736 58 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 624 116 vende;
-#X obj 669 109 fazer_amor;
+#X obj 663 267 fazer_amor;
 #X obj 320 304 table cores 12;
 #X obj 291 141 loadbang;
 #X msg 291 163 \; cores read cores.txt;
@@ -33,20 +31,39 @@ FSAA 4 \, frame 60 \, create \, 1;
 #X text 441 363 pitch;
 #X text 625 366 envelope;
 #X obj 442 319 sigmund~ -hop 4096 pitch env;
-#X obj 626 149 AEIOU;
+#X obj 656 185 AEIOU;
+#X msg 39 60 reset \, dimen 800 600 \, offset 1366 0 \, border 0 \,
+FSAA 4 \, frame 60 \, create \, 1;
+#X msg 5 12 reset \, dimen 800 600 \, offset 1366 0 \, border 1 \,
+FSAA 4 \, frame 60 \, create \, 1;
+#X obj 496 7 Poesia;
+#X obj 663 308 Life_going_on;
+#X obj 663 247 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 681 245 Glitch;
+#X obj 657 162 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 675 160 Letras;
+#X obj 155 254 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 9600 1;
+#X obj 155 390 s FBlevel;
 #X connect 0 0 1 0;
-#X connect 2 0 1 0;
-#X connect 4 0 3 0;
-#X connect 5 0 6 0;
-#X connect 6 0 4 0;
-#X connect 8 0 1 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;
+#X connect 7 0 1 0;
+#X connect 8 0 9 0;
+#X connect 8 1 9 1;
 #X connect 9 0 10 0;
-#X connect 9 1 10 1;
-#X connect 10 0 11 0;
-#X connect 13 0 12 0;
-#X connect 14 0 7 0;
-#X connect 15 0 7 1;
-#X connect 19 0 20 0;
-#X connect 21 0 3 1;
-#X connect 26 0 22 0;
-#X connect 26 1 23 0;
+#X connect 12 0 11 0;
+#X connect 13 0 6 0;
+#X connect 14 0 6 1;
+#X connect 18 0 19 0;
+#X connect 20 0 2 1;
+#X connect 25 0 21 0;
+#X connect 25 1 22 0;
+#X connect 27 0 1 0;
+#X connect 28 0 1 0;
+#X connect 31 0 16 0;
+#X connect 33 0 26 0;
+#X connect 35 0 36 0;
